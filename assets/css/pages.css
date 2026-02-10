@@ -1,0 +1,276 @@
+/* Page Specific Styles */
+
+/* Hero Text */
+.hero-title {
+    font-size: 58px;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 400px;
+}
+
+/* ... existing code ... */
+
+/* Video Section Text */
+.video-text h2 {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* ... existing code ... */
+
+/* Section Headers */
+.section-header {
+    text-align: left;
+    max-width: 600px;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* ... existing code ... */
+
+.popular-content h2 {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.popular-content p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Courses Page Styles */
+.courses-hero {
+    min-height: 40vh;
+    padding-bottom: 40px;
+    background-color: var(--dark-bg);
+}
+
+.courses-hero-container {
+    justify-content: center;
+    text-align: center;
+}
+
+.filter-section {
+    background-color: var(--dark-bg);
+    padding: 0 0 40px;
+}
+
+.filter-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
+.filter-btn {
+    white-space: nowrap;
+}
+
+/* Testimonials */
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.testimonial-content p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.testimonial-content h4 {
+    color: var(--primary-color);
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.testimonial-content .role {
+    color: var(--card-text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Responsive IFrame Styles */
+.header-iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    /* Default height */
+    border: none;
+    z-index: 1000;
+    overflow: visible;
+    /* Pass clicks through */
+    background: transparent;
+    /* Ensure iframe is transparent */
+}
+
+.courses-iframe {
+    width: 100%;
+    height: 950px;
+    /* Reduced from 1050px */
+    /* Desktop height */
+    border: none;
+    display: block;
+}
+
+.footer-iframe {
+    width: 100%;
+    height: 450px;
+    /* Reduced from 500px */
+    /* Desktop height */
+    border: none;
+    display: block;
+}
+
+.quality-iframe {
+    width: 100%;
+    height: 650px;
+    /* Increased from 550px */
+    /* Desktop height */
+    border: none;
+    display: block;
+}
+
+.team-iframe {
+    width: 100%;
+    height: 750px;
+    /* Reduced from 900px */
+    /* Desktop height */
+    border: none;
+    display: block;
+}
+
+/* Mobile Breakpoints */
+@media (max-width: 768px) {
+    .header-iframe {
+        height: 400px;
+        /* Allow space for open menu */
+    }
+
+    .courses-iframe {
+        /* height: 2150px; Handled by JS */
+        min-height: 500px;
+    }
+
+    .team-iframe {
+        /* height: 1700px; Handled by JS */
+        min-height: 500px;
+    }
+
+    .footer-iframe {
+        /* height: 1000px; Handled by JS */
+        min-height: 500px;
+    }
+
+    .quality-iframe {
+        /* height: 1300px; Handled by JS */
+        min-height: 500px;
+    }
+}
+
+/* Utility Overrides from index.html */
+.popular-feature-section.no-padding-top {
+    padding-top: 0;
+}
+
+.section-header.center-aligned {
+    margin: 0 auto 30px;
+}
+
+/* About Page Styles */
+.about-hero {
+    min-height: 50vh;
+    padding-bottom: 50px;
+}
+
+.video-section {
+    padding: 30px 0;
+}
+
+.video-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.video-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.video-preview-card {
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+/* Contact Page Styles */
+.contact-hero {
+    min-height: 40vh;
+    padding-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-form-wrapper {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-input {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #252B42;
+}
+
+.contact-info-wrapper {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-card {
+    margin-bottom: 20px;
+    height: auto;
+}

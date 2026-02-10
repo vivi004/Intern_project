@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - School Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header IFrame -->
+    <iframe src="header.html" class="header-iframe" allowtransparency="true"></iframe>
+
+    <main>
+        <section class="hero contact-hero">
+            <div class="container hero-container" style="justify-content: center; text-align: center;">
+                <div class="hero-content">
+                    <span class="tag">Get In Touch</span>
+                    <h1 class="hero-title">Let’s Start a<br>Conversation</h1>
+                    <p class="hero-text" style="max-width: none;">Have questions? We’re here to help you take the next
+                        step in your educational journey.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="features-section">
+            <div class="container contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h3 style="color: #252B42; margin-bottom: 20px;">Send a Message</h3>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" class="form-input">
+                        <input type="email" placeholder="Your Email" class="form-input">
+                        <textarea placeholder="Your Message" rows="5" class="form-input"></textarea>
+                        <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send
+                            Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper">
+                    <div class="section-header">
+                        <span class="tag">Visit Us</span>
+                        <h2>Our Office</h2>
+                        <p>Come say hello at our headquarters.</p>
+                    </div>
+
+                    <div class="feature-card contact-card">
+                        <div class="icon-circle icon-bg-1">
+                            <span>📍</span>
+                        </div>
+                        <h3>Address</h3>
+                        <p>V59-b,V-block,kovaipudur,coimbatore-641042</p>
+                    </div>
+
+                    <div class="feature-card contact-card">
+                        <div class="icon-circle icon-bg-3">
+                            <span>📞</span>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>6381728736</p>
+                    </div>
+
+                    <div class="feature-card contact-card">
+                        <div class="icon-circle icon-bg-2">
+                            <span>✉️</span>
+                        </div>
+                        <h3>Email</h3>
+                        <p>vivinmani20@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer IFrame -->
+    <iframe src="footer.html" class="footer-iframe"></iframe>
+
+    <script>
+        // Listen for messages from IFrames
+        window.addEventListener('message', function (e) {
+            if (e.data && e.data.type === 'resize-iframe') {
+                const iframes = document.querySelectorAll('iframe');
+                for (let i = 0; i < iframes.length; i++) {
+                    if (iframes[i].contentWindow === e.source) {
+                        iframes[i].style.height = (e.data.height + 20) + 'px';
+                        break;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

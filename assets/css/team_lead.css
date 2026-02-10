@@ -1,0 +1,76 @@
+/* Team Lead Styles */
+
+.team-section {
+    padding: 40px 0;
+    /* Reduced from var(--section-padding) */
+    background-color: var(--dark-bg);
+    overflow: hidden;
+    /* Ensure no scrollbars on body */
+}
+
+.section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 60px;
+    padding: 20px;
+    justify-content: center;
+    /* Center grid items */
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        gap: 40px;
+        padding: 0 20px;
+    }
+}
+
+/* Team Card */
+.team-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #252B42;
+    text-align: center;
+}
+
+.team-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.team-info {
+    padding: 30px;
+}
+
+.team-info h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.team-info .profession {
+    display: block;
+    color: #737373;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 14px;
+}

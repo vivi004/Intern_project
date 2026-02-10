@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #6D28D9;
+    /* Deep Purple */
+    --secondary-color: #8B5CF6;
+    /* Soft Purple */
+    --accent-bg: #F5F3FF;
+    /* Light Purple Background */
+
+    --text-color: #1F2937;
+    /* Dark Gray for high contrast */
+    --text-muted: #6B7280;
+    /* Gray for secondary text */
+
+    --dark-bg: #FFFFFF;
+    /* Main Background (White) */
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    /* White transparent navbar */
+
+    --card-bg: #F5F3FF;
+    /* Light Purple for cards */
+    --card-text: #1F2937;
+    /* Dark text on cards */
+
+    --success-color: #10B981;
+    --alert-color: #EF4444;
+
+    --font-family: 'Montserrat', sans-serif;
+    --transition: all 0.3s ease-in-out;
+    --border-radius: 12px;
+    --section-padding: 80px 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Utilities */
+.tag {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.rating {
+    background-color: #252B42;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.stars {
+    color: #F3CD03;
+    margin-bottom: 15px;
+}
+
+.red-bar {
+    display: block;
+    width: 94px;
+    height: 7px;
+    background-color: var(--alert-color);
+    margin-bottom: 30px;
+}
+
+.red-line-sm {
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: var(--alert-color);
+    margin-bottom: 15px;
+}
+
+.white-line-sm {
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #FFFFFF;
+    margin-bottom: 15px;
+}

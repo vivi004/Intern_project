@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - School Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <iframe src="header.html" class="header-iframe" allowtransparency="true"></iframe>
+
+    <main>
+        <section class="hero courses-hero">
+            <div class="container hero-container courses-hero-container">
+                <div class="hero-content">
+                    <span class="tag">Study With Us</span>
+                    <h1 class="hero-title">Pathways to<br>Success</h1>
+                    <p class="hero-text" style="max-width: none;">Discover world-class courses designed to elevate your
+                        career and unlock new opportunities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div class="container filter-container">
+                <button class="btn btn-primary filter-btn active" data-filter="all">All</button>
+                <button class="btn btn-outline filter-btn" data-filter="design">Design</button>
+                <button class="btn btn-outline filter-btn" data-filter="development">Development</button>
+                <button class="btn btn-outline filter-btn" data-filter="marketing">Marketing</button>
+                <button class="btn btn-outline filter-btn" data-filter="data">Data Science</button>
+            </div>
+        </section>
+
+        <iframe src="courses_grid.html" class="courses-iframe"></iframe>
+    </main>
+
+    <iframe src="footer.html" class="footer-iframe"></iframe>
+
+    <script>
+        window.addEventListener('message', function (e) {
+            if (e.data && e.data.type === 'resize-iframe') {
+                const iframes = document.querySelectorAll('iframe');
+                for (let i = 0; i < iframes.length; i++) {
+                    if (iframes[i].contentWindow === e.source) {
+                        iframes[i].style.height = (e.data.height + 20) + 'px';
+                        break;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

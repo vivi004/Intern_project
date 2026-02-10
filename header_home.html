@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header - School Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="assets/js/iframe-resizer.js" defer></script>
+    <base target="_parent">
+    <style>
+        html,
+        body {
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Hide scrollbars */
+            pointer-events: none;
+            /* Let clicks pass through transparent areas */
+        }
+
+        /* Re-enable clicks on interactive elements */
+        .header-container,
+        .nav,
+        .header-actions,
+        .mobile-toggle {
+            pointer-events: auto;
+        }
+
+        /* Home Page Specific Header Style */
+        .header {
+            background-color: rgba(30, 35, 50, 0.8);
+            /* Slightly different, semi-transparent */
+            backdrop-filter: blur(10px);
+            /* Modern blur effect */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" style="position: relative;">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Squash Apps</a>
+
+            <!-- Checkbox Hack for Mobile Menu -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="courses.html" class="nav-link">Study</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-text">Login</a>
+                <a href="signup.html" class="btn btn-primary">Join Us</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <label for="nav-toggle" class="mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </header>
+</body>
+
+</html>

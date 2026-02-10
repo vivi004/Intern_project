@@ -1,0 +1,117 @@
+/* Quality Education Styles */
+
+.features-section {
+    padding: 80px 0;
+    /* Increased for better vertical spacing */
+    background-color: var(--dark-bg);
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Section Header */
+.section-header {
+    text-align: left;
+    margin-left: 20px;
+    max-width: 600px;
+    margin-bottom: 50px;
+    /* Increased bottom margin */
+}
+
+.section-header h2 {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 60px;
+    /* Significantly increased gap */
+    padding: 20px;
+    /* Increased padding against edges */
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        gap: 40px;
+        /* Balanced gap for mobile */
+        padding: 0 20px;
+    }
+}
+
+/* Feature Card */
+.feature-card {
+    background-color: #FFFFFF;
+    padding: 35px;
+    border-radius: var(--border-radius);
+    color: var(--card-text);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-active {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    box-shadow: 0 15px 30px rgba(139, 92, 246, 0.3);
+}
+
+.feature-card h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #737373;
+    line-height: 1.6;
+}
+
+.feature-active p {
+    color: #FFFFFF;
+}
+
+/* Icons */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.icon-bg-1 {
+    background-color: #E9DFFC;
+    color: var(--primary-color);
+}
+
+.icon-bg-2 {
+    background-color: #FFDCD1;
+    color: var(--alert-color);
+}
+
+.icon-bg-3 {
+    background-color: #b2f6ef;
+    color: #00A3C4;
+}
+
+.icon-white {
+    background-color: #FFFFFF;
+    color: var(--primary-color);
+}

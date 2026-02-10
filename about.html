@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - School Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header  -->
+    <iframe src="header.html" class="header-iframe" allowtransparency="true"></iframe>
+
+    <main>
+        <!-- PageTitleSections -->
+        <section class="hero about-hero">
+            <div class="container hero-container" style="justify-content: center; text-align: center;">
+                <div class="hero-content" style="max-width: 800px;">
+                    <span class="tag">Who We Are</span>
+                    <h1 class="hero-title">Building a Legacy<br>of Excellence</h1>
+                    <p class="hero-text" style="margin: 0 auto; margin-bottom: 40px;">Dedicated to empowering students
+                        with the knowledge and skills to shape the future.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Text -->
+        <section class="video-section">
+            <div class="container video-container">
+                <div class="video-text">
+                    <span class="red-bar"></span>
+                    <h2>Our Story</h2>
+                    <p class="section-desc">Problems trying to resolve the conflict between the two major realms of
+                        Classical physics: Newtonian mechanics. We started with a mission to make education accessible
+                        to everyone.</p>
+                </div>
+                <div class="video-preview-card"
+                    style="background-image: url('https://placehold.co/600x400/252B42/FFF?text=Our+Story');">
+                    <!-- Placeholder image -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission / Vision Cards -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag">Our Values</span>
+                    <h2>Mission & Vision</h2>
+                    <p>What drives us every day to help you succeed.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card feature-active">
+                        <div class="icon-circle icon-white">
+                            <span>🚀</span>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <span class="white-line-sm"></span>
+                        <p>To provide high-quality education that empowers individuals to achieve their career goals.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-circle icon-bg-1">
+                            <span>👁️</span>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <span class="red-line-sm"></span>
+                        <p>To be the world's leading online learning platform for professional development.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-circle icon-bg-3">
+                            <span>💎</span>
+                        </div>
+                        <h3>Our Values</h3>
+                        <span class="red-line-sm"></span>
+                        <p>Integrity, Innovation, and Inclusivity are at the heart of everything we do.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer IFrame -->
+    <iframe src="footer.html" class="footer-iframe"></iframe>
+
+    <script>
+        // Listen for messages from IFrames
+        window.addEventListener('message', function (e) {
+            if (e.data && e.data.type === 'resize-iframe') {
+                const iframes = document.querySelectorAll('iframe');
+                for (let i = 0; i < iframes.length; i++) {
+                    if (iframes[i].contentWindow === e.source) {
+                        iframes[i].style.height = (e.data.height + 20) + 'px';
+                        break;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+/* Layout & Grid System */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Layout */
+.header {
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(30, 35, 50, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hero Layout */
+.hero {
+    padding: 160px 0 100px;
+    background-color: var(--dark-bg);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-content .tag {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Section Layouts */
+.video-section {
+    padding: var(--section-padding);
+    background-color: var(--accent-bg);
+}
+
+.video-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.partners-section {
+    padding: 50px 0;
+    background-color: var(--dark-bg);
+}
+
+.partners-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.features-section {
+    padding: var(--section-padding);
+    background-color: var(--accent-bg);
+}
+
+.courses-section {
+    padding: var(--section-padding);
+    background-color: var(--dark-bg);
+}
+
+.popular-feature-section {
+    padding: var(--section-padding);
+    background-color: var(--accent-bg);
+}
+
+.popular-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.testimonials-section {
+    padding: var(--section-padding);
+    background-color: var(--dark-bg);
+}
+
+.team-section {
+    padding: var(--section-padding);
+    background-color: var(--accent-bg);
+}
+
+.newsletter-section {
+    padding: var(--section-padding);
+    background-color: var(--dark-bg);
+    text-align: center;
+}
+
+/* Grids */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+/* Footer Layout */
+.footer {
+    padding: 30px 0 30px;
+    /* Reduced top padding from 50px */
+    background-color: var(--dark-bg);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    /* .header-container { } - Removed empty rule */
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image-wrapper {
+        justify-content: center;
+    }
+
+    .video-container {
+        flex-direction: column;
+    }
+
+    .partners-container {
+        justify-content: center;
+    }
+
+    .popular-container {
+        flex-direction: column-reverse;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
