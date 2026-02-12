@@ -221,8 +221,10 @@
 
 @media (max-width: 480px) {
     .logo span {
-        display: none;
-        /* Hide text on very small screens to prioritize buttons */
+        display: block;
+        /* Show text */
+        font-size: 16px;
+        /* Slightly smaller to fit */
     }
 
     .header-actions .btn {
