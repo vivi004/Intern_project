@@ -187,12 +187,17 @@
         text-align: center;
     }
 
+    .hero-content {
+        margin: 0 auto;
+    }
+
     .hero-image-wrapper {
         justify-content: center;
     }
 
     .video-container {
         flex-direction: column;
+        text-align: center;
     }
 
     .partners-container {
@@ -201,14 +206,30 @@
 
     .popular-container {
         flex-direction: column-reverse;
+        text-align: center;
     }
 
     .footer-links {
         flex-direction: column;
+        text-align: center;
     }
 
     .footer-bottom {
         flex-direction: column;
         gap: 20px;
+        text-align: center;
+    }
+
+    .section-header {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Ensure buttons are centered in mobile view if they are flex/block */
+    .hero-buttons {
+        justify-content: center;
+        display: flex;
+        gap: 15px;
     }
 }
