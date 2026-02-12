@@ -163,10 +163,20 @@
 }
 
 @media (max-width: 768px) {
+    .header-container {
+        padding: 0 10px;
+        /* Reduce padding */
+    }
+
+    .logo span {
+        display: none;
+        /* Hide logo text on very small screens if needed, or adjust font size. Let's keep it but maybe smaller */
+    }
+
     .mobile-toggle {
-        display: flex;
+        display: none !important;
         z-index: 1001;
-        /* Above the menu */
+        margin-left: 10px;
     }
 
     .nav {
@@ -182,15 +192,42 @@
         gap: 15px;
         text-align: center;
         border-radius: 0 0 10px 10px;
+        z-index: 1000;
     }
 
     .header-actions {
-        display: none;
+        display: flex;
+        /* Show actions */
+        gap: 10px;
+    }
+
+    .header-actions .btn {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    /* Make logo text smaller on mobile to fit everything */
+    .logo span {
+        display: block;
+        /* Ensure it's visible unless screen is tiny */
+        font-size: 18px;
     }
 
     /* Checkbox Hack Logic */
     .nav-toggle:checked~.nav {
         display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo span {
+        display: none;
+        /* Hide text on very small screens to prioritize buttons */
+    }
+
+    .header-actions .btn {
+        padding: 6px 10px;
+        font-size: 12px;
     }
 }
 
