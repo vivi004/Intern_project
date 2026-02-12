@@ -45,6 +45,16 @@
         /* Balanced gap for mobile */
         padding: 0 20px;
     }
+
+    .section-header {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+    }
 }
 
 /* Feature Card */

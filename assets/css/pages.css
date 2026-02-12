@@ -274,3 +274,49 @@
     margin-bottom: 20px;
     height: auto;
 }
+
+/* Mobile Breakpoint for Pages */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .section-header {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+    }
+
+    .popular-content {
+        text-align: center;
+    }
+
+    .popular-content h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .video-text {
+        text-align: center;
+    }
+
+    .video-text h2 {
+        font-size: 32px;
+    }
+}
