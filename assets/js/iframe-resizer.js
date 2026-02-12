@@ -1,9 +1,3 @@
-/**
- * IFrame Resizer Script
- * 
- * This script handles communication between the child pages and the parent page.
- * Child pages send their content height, and the parent adjusts the IFrame height.
- */
 
 (function () {
     function sendHeight() {
@@ -25,7 +19,6 @@
     // Run on resize
     window.addEventListener('resize', sendHeight);
 
-    // Run on DOM mutations (dynamic content changes)
     const observer = new MutationObserver(sendHeight);
     if (document.body) {
         observer.observe(document.body, { attributes: true, childList: true, subtree: true });

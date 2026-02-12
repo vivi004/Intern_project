@@ -105,6 +105,14 @@
 
 /* Nav */
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo i,
+.logo span {
     font-size: 26px;
     font-weight: 800;
     background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
