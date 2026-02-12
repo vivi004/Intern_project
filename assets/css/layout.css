@@ -70,7 +70,7 @@
 }
 
 .partners-section {
-    padding: 50px 0;
+    padding: var(--section-padding);
     background-color: var(--dark-bg);
 }
 
