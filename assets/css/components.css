@@ -130,15 +130,19 @@
 
 .nav-link {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF;
     opacity: 0.9;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: var(--transition);
 }
 
 .nav-link:hover,
 .nav-link.active {
     opacity: 1;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #FFFFFF;
 }
 
 .header-actions {
